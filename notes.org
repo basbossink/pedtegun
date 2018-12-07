@@ -1,0 +1,28 @@
+#+TITLE: pedtegun
+#+AUTHOR:    Bas Bossink
+#+EMAIL:     bas.bossink@divverence.com
+#+LANGUAGE:  en
+#+OPTIONS:   num:nil toc:nil \n:nil @:t ::t |:t ^:nil -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc author:nil date:nil
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+STARTUP: context
+* Planning
+** TODO investigate [[https://github.com/rayon-rs/rayon][rayon]]
+** TODO design datastructures
+
+* Ideas
+** Index
+- Use [[https://capnproto.org/index.html][capnproto]] for the file format of the index
+  - [[https://github.com/capnproto/capnproto-rust/tree/master/capnpc][rust capnproto compiler]]
+  - [[https://github.com/capnproto/capnproto-rust/tree/master/capnp][rust capnproto runtime library]]
+  - use [[https://github.com/bozaro/lz4-rs][lz4-rs]] compression for the index
+  - use [[https://capnproto.org/encoding.html#packing][packed encoding]]
+- use [[https://github.com/tafia/quick-xml][quick-xml]] for nuspec and csproj parsing
+- use [[https://github.com/BurntSushi/walkdir][walkdir]] for finding files
+** Command line
+- Use [[https://killercup.github.io/quicli/][quicli]] for the cli
+- Use [[https://github.com/mitsuhiko/indicatif][indicatif]] for the progress bar during indexing
+** Data model
+- use [[https://github.com/bluss/petgraph][petgraph]] for graph processing and dot output
